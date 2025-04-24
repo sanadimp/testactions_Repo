@@ -9,3 +9,18 @@ jobs:
               run : | 
                  echo "This job is running on a Ubuntu Runner" 
                  uname -a 
+    windows-echo : 
+        runs-on : windows-latest
+        steps: 
+            - name : Show OS    
+              shell: bash 
+              run : |
+                echo "This job is running on a Windows Runner "
+                systeminfo
+    mac-echo: 
+        runs-on : macos-latest
+        jobs: 
+            - name : Show OS 
+              run : |
+               echo "this job is running on a MacOS runner "
+               uname -a 
