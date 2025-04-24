@@ -9,7 +9,7 @@ jobs:
               run : | 
                  echo "This job is running on a Ubuntu Runner" 
                  # uname -a
-                 echo " The runner version is ${{Runner_OS}}"
+                 echo " Runner OS : $RUNNER_OS"
     windows-echo : 
         runs-on : windows-latest
         steps: 
@@ -17,11 +17,13 @@ jobs:
               shell: bash 
               run : |
                 echo "This job is running on a Windows Runner "
-                systeminfo
+                #systeminfo
+                echo " Runner OS : $RUNNER_OS"
     mac-echo: 
         runs-on : macos-latest
         steps: 
             - name : Show OS 
               run : |
                echo "this job is running on a MacOS runner "
-                uname -a 
+               # uname -a
+               echo " Runner OS : $RUNNER_OS" 
