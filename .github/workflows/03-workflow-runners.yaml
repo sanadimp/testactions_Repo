@@ -8,7 +8,8 @@ jobs:
            -  name : Show OS
               run : | 
                  echo "This job is running on a Ubuntu Runner" 
-                 uname -a 
+                 # uname -a
+                 echo " The runner version is ${{Runner_OS}}"
     windows-echo : 
         runs-on : windows-latest
         steps: 
@@ -23,4 +24,4 @@ jobs:
             - name : Show OS 
               run : |
                echo "this job is running on a MacOS runner "
-               uname -a 
+                uname -a 
