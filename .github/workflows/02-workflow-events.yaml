@@ -3,7 +3,7 @@ on :
   push:
   workflow_dispatch:
   schedule:
-    - cron: '*/1 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs :
     echo :
@@ -12,4 +12,4 @@ jobs :
           - name : Show the trigger
             run: |
              echo "Event name: ${{ github.event_name }}"
- 
+  
